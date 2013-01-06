@@ -1,0 +1,14 @@
+2013-01-05 22:53:15 Error: [NotFoundException] Invalid professor
+#0 [internal function]: ProfessorsController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfessorsController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfessorsController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-05 23:32:42 Error: [NotFoundException] Invalid professor
+#0 [internal function]: ProfessorsController->delete()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ProfessorsController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfessorsController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
