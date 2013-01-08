@@ -15,7 +15,17 @@
 <meta name="description" content="Website description" />
 <meta name="keywords" content="keyword1,keyword2,keyword2,keyword4" />
 <?php echo $this->Html->css('cake.forms', 'stylesheet', array("media"=>"all" ));?>
+
 <?php echo $this->Html->css('contented1', 'stylesheet', array("media"=>"all" ));?>
+<?php
+		echo $this->Html->meta('icon');
+
+		//echo $this->Html->css('cake.generic');
+
+		echo $this->fetch('meta');
+		echo $this->fetch('css');
+		echo $this->fetch('script');
+	?>
 </head>
 <body>
 <div id="header">
@@ -52,24 +62,7 @@ strict</a>.
 It's been tested for consistent appearance on:
 </p>
 
-<ul>
-<li>Internet Explorer 6.0.2900.2180</li>
-<li>Firefox 1.5.0.2</li>
-<li>Opera 8.53</li>
-</ul>
 
-<p>
-Current version: Contented1 Version 1.02 (May 17, 2006)
-</p>
-		  
-<h1>Using this Design</h1>
-
-<p>
-Contented1 is an open source template. You're free to modify it and
-use it for any purpose without cost or obligation. We
-prefer that you leave the link to our website  in the
-footer but it's not required.
-</p>
 
 <p>
 If you have comments or questions, please contact us at <a
@@ -79,25 +72,6 @@ href="http://www.contenteddesigns.com">Contented Designs</a>.  Thanks!
 </div>
 
 <div id="sidecontent">
-
-<h1>News</h1> Use this sidebar for recent news, press releases,
-upcoming events, notes.
-
-<p>
-<a href="#">This is a link to a page describing a news item.</a> (2006-04-02)
-</p>
-
-<p>
-<a href="#">This is a link to a page describing a news item.</a> (2006-04-01)
-</p>
-
-<p>
-<a href="#">This is a link to a page describing a news item.</a> (2006-03-22)
-</p>
-
-<p>
-<a href="#">This is a link to a page describing a news item.</a> (2006-03-17)
-</p>
 
 </div>
 </div>

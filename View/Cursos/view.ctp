@@ -8,7 +8,7 @@
 		</dd>
 		<dt><?php echo __('Departamento'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($curso['Departamento']['id'], array('controller' => 'departamentos', 'action' => 'view', $curso['Departamento']['id'])); ?>
+			<?php echo $this->Html->link($curso['Departamento']['nome'], array('controller' => 'departamentos', 'action' => 'view', $curso['Departamento']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Nome'); ?></dt>

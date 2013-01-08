@@ -12,7 +12,9 @@ class CursosController extends AppController {
  *
  * @return void
  */
+    
 	public function index() {
+                $this->pageTitle = 'Cursos: Index';
 		$this->Curso->recursive = 0;
 		$this->set('cursos', $this->paginate());
 	}
@@ -25,6 +27,7 @@ class CursosController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+                $this->pageTitle = 'Cursos: Ver cursos';
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
 			throw new NotFoundException(__('Invalid curso'));
@@ -38,6 +41,7 @@ class CursosController extends AppController {
  * @return void
  */
 	public function add() {
+                $this->pageTitle = 'Cursos: Adicionar Curso';
 		if ($this->request->is('post')) {
 			$this->Curso->create();
 			if ($this->Curso->save($this->request->data)) {
@@ -47,7 +51,8 @@ class CursosController extends AppController {
 				$this->Session->setFlash(__('The curso could not be saved. Please, try again.'));
 			}
 		}
-		$departamentos = $this->Curso->Departamento->find('list');
+		
+		$departamentos = $this->Curso->Departamento->find('list',array('fields'=> array ('Departamento.id','Departamento.nome')));
 		$this->set(compact('departamentos'));
 	}
 
@@ -59,6 +64,7 @@ class CursosController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+                $this->pageTitle = 'Cursos: Editar Cursos';
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
 			throw new NotFoundException(__('Invalid curso'));
@@ -73,7 +79,7 @@ class CursosController extends AppController {
 		} else {
 			$this->request->data = $this->Curso->read(null, $id);
 		}
-		$departamentos = $this->Curso->Departamento->find('list');
+		$departamentos = $this->Curso->Departamento->find('list',array('fields'=> array ('Departamento.id','Departamento.nome')));
 		$this->set(compact('departamentos'));
 	}
 

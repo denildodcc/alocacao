@@ -12,7 +12,7 @@
 	<tr>
 		<td><?php echo h($curso['Curso']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($curso['Departamento']['id'], array('controller' => 'departamentos', 'action' => 'view', $curso['Departamento']['id'])); ?>
+			<?php echo $this->Html->link($curso['Departamento']['nome'], array('controller' => 'departamentos', 'action' => 'view', $curso['Departamento']['id'])); ?>
 		</td>
 		<td><?php echo h($curso['Curso']['nome']); ?>&nbsp;</td>
 		<td class="actions">
@@ -43,7 +43,6 @@
 	<ul>
 		<li><?php echo $this->Html->link(__('Adicionar Curso'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('Listar Departamentos'), array('controller' => 'departamentos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Adicionar Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('Listar Disciplinas'), array('controller' => 'disciplinas', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('Adicionar Disciplina'), array('controller' => 'disciplinas', 'action' => 'add')); ?> </li>
 	</ul>
