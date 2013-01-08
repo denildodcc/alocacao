@@ -27,7 +27,7 @@ class DiasController extends AppController {
 	public function view($id = null) {
 		$this->Dia->id = $id;
 		if (!$this->Dia->exists()) {
-			throw new NotFoundException(__('Invalid dia'));
+			throw new NotFoundException(__('Dia inválido'));
 		}
 		$this->set('dia', $this->Dia->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class DiasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Dia->create();
 			if ($this->Dia->save($this->request->data)) {
-				$this->Session->setFlash(__('The dia has been saved'));
+				$this->Session->setFlash(__('O registro foi adicionado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The dia could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 	}
@@ -59,14 +59,14 @@ class DiasController extends AppController {
 	public function edit($id = null) {
 		$this->Dia->id = $id;
 		if (!$this->Dia->exists()) {
-			throw new NotFoundException(__('Invalid dia'));
+			throw new NotFoundException(__('Dia inválido'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Dia->save($this->request->data)) {
-				$this->Session->setFlash(__('The dia has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The dia could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Dia->read(null, $id);
@@ -87,7 +87,7 @@ class DiasController extends AppController {
 		}
 		$this->Dia->id = $id;
 		if (!$this->Dia->exists()) {
-			throw new NotFoundException(__('Invalid dia'));
+			throw new NotFoundException(__('Dia inválido'));
 		}
 		if ($this->Dia->delete()) {
 			$this->Session->setFlash(__('Dia deleted'));

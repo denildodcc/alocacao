@@ -27,7 +27,7 @@ class CursosController extends AppController {
 	public function view($id = null) {
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
-			throw new NotFoundException(__('Invalid curso'));
+			throw new NotFoundException(__('Curso inválido'));
 		}
                 
 		$this->set('curso', $this->Curso->read(null, $id));
@@ -63,14 +63,14 @@ class CursosController extends AppController {
 	public function edit($id = null) {
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
-			throw new NotFoundException(__('Invalid curso'));
+			throw new NotFoundException(__('Curso Inválido'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Curso->save($this->request->data)) {
 				$this->Session->setFlash(__('O registro foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The curso could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo. Por favor tente novamente.'));
 			}
 		} else {
 			$this->request->data = $this->Curso->read(null, $id);
@@ -99,7 +99,7 @@ class CursosController extends AppController {
 			$this->Session->setFlash(__('Registro excluído com sucesso'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('O Curso não foi excluído'));
+		$this->Session->setFlash(__('O registro não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

@@ -27,7 +27,7 @@ class TurmasHorariosController extends AppController {
 	public function view($id = null) {
 		$this->TurmasHorario->id = $id;
 		if (!$this->TurmasHorario->exists()) {
-			throw new NotFoundException(__('Invalid turmas horario'));
+			throw new NotFoundException(__('Turmas e horários inválidos'));
 		}
 		$this->set('turmasHorario', $this->TurmasHorario->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class TurmasHorariosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->TurmasHorario->create();
 			if ($this->TurmasHorario->save($this->request->data)) {
-				$this->Session->setFlash(__('The turmas horario has been saved'));
+				$this->Session->setFlash(__('Horario adicionado a turma '));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The turmas horario could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O horario não pode ser adicionado'));
 			}
 		}
 	}
@@ -59,14 +59,14 @@ class TurmasHorariosController extends AppController {
 	public function edit($id = null) {
 		$this->TurmasHorario->id = $id;
 		if (!$this->TurmasHorario->exists()) {
-			throw new NotFoundException(__('Invalid turmas horario'));
+			throw new NotFoundException(__('Turmas e horários inválidos'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->TurmasHorario->save($this->request->data)) {
-				$this->Session->setFlash(__('The turmas horario has been saved'));
+				$this->Session->setFlash(__('O horário da turma foi atualizado'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The turmas horario could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O horario não pode ser adicionado'));
 			}
 		} else {
 			$this->request->data = $this->TurmasHorario->read(null, $id);
@@ -87,13 +87,19 @@ class TurmasHorariosController extends AppController {
 		}
 		$this->TurmasHorario->id = $id;
 		if (!$this->TurmasHorario->exists()) {
-			throw new NotFoundException(__('Invalid turmas horario'));
+			throw new NotFoundException(__('Turmas e horários inválidos'));
 		}
 		if ($this->TurmasHorario->delete()) {
-			$this->Session->setFlash(__('Turmas horario deleted'));
+			$this->Session->setFlash(__('O horario da turma foi excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Turmas horario was not deleted'));
+		$this->Session->setFlash(__('O horário da turma não pode ser excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
+        
+        public function echoHorario($id){
+            $horario = $this->TurmasHorario->findById($id); 
+            $stringHorario = $horario['Dia']['nome'];
+            return $stringHorario;
+        }
 }

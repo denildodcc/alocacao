@@ -41,10 +41,10 @@ class FavoritosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Favorito->create();
 			if ($this->Favorito->save($this->request->data)) {
-				$this->Session->setFlash(__('The favorito has been saved'));
+				$this->Session->setFlash(__('A relação foi adicionada com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The favorito could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('A relação não pode ser salva'));
 			}
 		}
 		$institutos = $this->Favorito->Instituto->find('list');
@@ -94,10 +94,10 @@ class FavoritosController extends AppController {
 			throw new NotFoundException(__('Invalid favorito'));
 		}
 		if ($this->Favorito->delete()) {
-			$this->Session->setFlash(__('Favorito deleted'));
+			$this->Session->setFlash(__('Relação excluída'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Favorito was not deleted'));
+		$this->Session->setFlash(__('A relação não foi excluída'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

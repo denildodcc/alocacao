@@ -4,8 +4,7 @@
 		<legend><?php echo __('Adição de Horario'); ?></legend>
 	<?php
 		echo $this->Form->input('hora_id');
-		echo $this->Form->input('dia_id');
-		echo $this->Form->input('Turma');
+		echo $this->Form->input('dia_id');	
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Enviar')); ?>

@@ -27,7 +27,7 @@ class SalasController extends AppController {
 	public function view($id = null) {
 		$this->Sala->id = $id;
 		if (!$this->Sala->exists()) {
-			throw new NotFoundException(__('Invalid sala'));
+			throw new NotFoundException(__('Sala inválida'));
 		}
 		$this->set('sala', $this->Sala->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class SalasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Sala->create();
 			if ($this->Sala->save($this->request->data)) {
-				$this->Session->setFlash(__('The sala has been saved'));
+				$this->Session->setFlash(__('O registro foi adicionado com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The sala could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 		$turmas = $this->Sala->Turma->find('list');
@@ -61,14 +61,14 @@ class SalasController extends AppController {
 	public function edit($id = null) {
 		$this->Sala->id = $id;
 		if (!$this->Sala->exists()) {
-			throw new NotFoundException(__('Invalid sala'));
+			throw new NotFoundException(__('Sala inválida'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Sala->save($this->request->data)) {
-				$this->Session->setFlash(__('The sala has been saved'));
+				$this->Session->setFlash(__('O registro não foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The sala could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Sala->read(null, $id);
@@ -91,13 +91,13 @@ class SalasController extends AppController {
 		}
 		$this->Sala->id = $id;
 		if (!$this->Sala->exists()) {
-			throw new NotFoundException(__('Invalid sala'));
+			throw new NotFoundException(__('Sala inválida'));
 		}
 		if ($this->Sala->delete()) {
-			$this->Session->setFlash(__('Sala deleted'));
+			$this->Session->setFlash(__('A Sala foi excluída'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Sala was not deleted'));
+		$this->Session->setFlash(__('A sala não foi excluída'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

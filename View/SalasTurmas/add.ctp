@@ -6,7 +6,7 @@
 		echo $this->Form->input('predio_id');
 		echo $this->Form->input('turma_id');
 		echo $this->Form->input('disciplina_id');
-		echo $this->Form->input('nome');
+		echo $this->Form->input('sala_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

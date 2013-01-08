@@ -6,7 +6,6 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('hora_id');
 		echo $this->Form->input('dia_id');
-		echo $this->Form->input('Turma');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Enviar')); ?>

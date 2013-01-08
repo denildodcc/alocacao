@@ -56,6 +56,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
                             <li><?php echo $this->Html->link(__('Cursos'), array('controller' => 'cursos', 'action' => 'index')); ?> </li>
                             <li><?php echo $this->Html->link(__('Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?> </li>
                             <li><?php echo $this->Html->link(__('Predios'), array('controller' => 'predios', 'action' => 'index')); ?> </li>
+                            <li><?php echo $this->Html->link(__('Disciplinas'), array('controller' => 'disciplinas', 'action' => 'index')); ?> </li>
+                            <li><?php echo $this->Html->link(__('Horário'), array('controller' => 'horarios', 'action' => 'index')); ?> </li>
+                            <li><?php echo $this->Html->link(__('Alocação Manual'), array('controller' => 'salas_turmas', 'action' => 'add')); ?> </li>
                     </ul>
                     </div>
                     

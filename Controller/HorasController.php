@@ -27,7 +27,7 @@ class HorasController extends AppController {
 	public function view($id = null) {
 		$this->Hora->id = $id;
 		if (!$this->Hora->exists()) {
-			throw new NotFoundException(__('Invalid hora'));
+			throw new NotFoundException(__('Hora inválida'));
 		}
 		$this->set('hora', $this->Hora->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class HorasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Hora->create();
 			if ($this->Hora->save($this->request->data)) {
-				$this->Session->setFlash(__('The hora has been saved'));
+				$this->Session->setFlash(__('Registro adicionado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The hora could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 	}
@@ -59,14 +59,14 @@ class HorasController extends AppController {
 	public function edit($id = null) {
 		$this->Hora->id = $id;
 		if (!$this->Hora->exists()) {
-			throw new NotFoundException(__('Invalid hora'));
+			throw new NotFoundException(__('Hora inválida'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Hora->save($this->request->data)) {
-				$this->Session->setFlash(__('The hora has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The hora could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Hora->read(null, $id);
@@ -87,13 +87,13 @@ class HorasController extends AppController {
 		}
 		$this->Hora->id = $id;
 		if (!$this->Hora->exists()) {
-			throw new NotFoundException(__('Invalid hora'));
+			throw new NotFoundException(__('Hora inválida'));
 		}
 		if ($this->Hora->delete()) {
-			$this->Session->setFlash(__('Hora deleted'));
+			$this->Session->setFlash(__('A hora foi excluída'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Hora was not deleted'));
+		$this->Session->setFlash(__('A hora não foi excluída'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

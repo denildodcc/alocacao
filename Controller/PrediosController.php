@@ -27,7 +27,7 @@ class PrediosController extends AppController {
 	public function view($id = null) {
 		$this->Predio->id = $id;
 		if (!$this->Predio->exists()) {
-			throw new NotFoundException(__('Invalid predio'));
+			throw new NotFoundException(__('Prédio Inválido'));
 		}
 		$this->set('predio', $this->Predio->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class PrediosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Predio->create();
 			if ($this->Predio->save($this->request->data)) {
-				$this->Session->setFlash(__('The predio has been saved'));
+				$this->Session->setFlash(__('Registro adicionado com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The predio could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 	}
@@ -59,14 +59,14 @@ class PrediosController extends AppController {
 	public function edit($id = null) {
 		$this->Predio->id = $id;
 		if (!$this->Predio->exists()) {
-			throw new NotFoundException(__('Invalid predio'));
+			throw new NotFoundException(__('Prédio Inválido'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Predio->save($this->request->data)) {
 				$this->Session->setFlash(__('The predio has been saved'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The predio could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Predio->read(null, $id);
@@ -87,13 +87,13 @@ class PrediosController extends AppController {
 		}
 		$this->Predio->id = $id;
 		if (!$this->Predio->exists()) {
-			throw new NotFoundException(__('Invalid predio'));
+			throw new NotFoundException(__('Prédio Inválido'));
 		}
 		if ($this->Predio->delete()) {
-			$this->Session->setFlash(__('Predio deleted'));
+			$this->Session->setFlash(__('O Predio foi excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Predio was not deleted'));
+		$this->Session->setFlash(__('O Predio não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

@@ -1,20 +1,20 @@
 <div class="favoritos form">
 <?php echo $this->Form->create('Favorito'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Favorito'); ?></legend>
+		<legend><?php echo __('Adiciona Relação Favorito'); ?></legend>
 	<?php
 		echo $this->Form->input('instituto_id');
 		echo $this->Form->input('ordem');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Enviar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Favoritos'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Instituto'), array('controller' => 'institutos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Relações de Favoritos'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Instituto'), array('controller' => 'institutos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

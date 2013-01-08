@@ -38,13 +38,21 @@ class SalasTurmasController extends AppController {
  * @return void
  */
 	public function add() {
+            
+                $predios = $this->SalasTurma->Predio->find('list',array('fields'=> array ('Predio.id','Predio.nome')));
+                $turmas = $this->SalasTurma->Turma->find('list',array('fields'=> array ('Turma.cod_turmas')));
+                $disciplinas = $this->SalasTurma->Disciplina->find('list',array('fields'=> array ('Disciplina.id','Disciplina.nome')));
+                
+                $this->set(compact(  'turmas','disciplinas','predios'));
+                               
+                
 		if ($this->request->is('post')) {
 			$this->SalasTurma->create();
 			if ($this->SalasTurma->save($this->request->data)) {
-				$this->Session->setFlash(__('The salas turma has been saved'));
+				$this->Session->setFlash(__('Alocação realizada com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The salas turma could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('A alocação não pode ser realizada'));
 			}
 		}
 	}
@@ -63,10 +71,10 @@ class SalasTurmasController extends AppController {
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->SalasTurma->save($this->request->data)) {
-				$this->Session->setFlash(__('The salas turma has been saved'));
+				$this->Session->setFlash(__('A alocação foi alterada'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The salas turma could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('A alocação não pode ser realizada.'));
 			}
 		} else {
 			$this->request->data = $this->SalasTurma->read(null, $id);
@@ -90,10 +98,10 @@ class SalasTurmasController extends AppController {
 			throw new NotFoundException(__('Invalid salas turma'));
 		}
 		if ($this->SalasTurma->delete()) {
-			$this->Session->setFlash(__('Salas turma deleted'));
+			$this->Session->setFlash(__('A alocação foi excluída'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Salas turma was not deleted'));
+		$this->Session->setFlash(__('A alocação não foi excluída'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

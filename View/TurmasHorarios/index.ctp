@@ -10,6 +10,7 @@
 	<?php
 	foreach ($turmasHorarios as $turmasHorario): ?>
 	<tr>
+            <?php //debug($turmasHorarios)?>
 		<td><?php echo h($turmasHorario['TurmasHorario']['horario_id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($turmasHorario['Turma']['disciplina_id'], array('controller' => 'turmas', 'action' => 'view', $turmasHorario['Turma']['disciplina_id'])); ?>

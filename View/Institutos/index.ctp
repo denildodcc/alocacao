@@ -4,12 +4,13 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
-			<th><?php echo $this->Paginator->sort('endere�o'); ?></th>
+			<th><?php echo $this->Paginator->sort('endereço'); ?></th>
 			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	<?php
 	foreach ($institutos as $instituto): ?>
 	<tr>
+            <?php //debug($instituto)?>
 		<td><?php echo h($instituto['Instituto']['id']); ?>&nbsp;</td>
 		<td><?php echo h($instituto['Instituto']['nome']); ?>&nbsp;</td>
 		<td><?php echo h($instituto['Instituto']['endereço']); ?>&nbsp;</td>

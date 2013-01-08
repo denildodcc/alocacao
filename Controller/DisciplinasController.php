@@ -29,7 +29,7 @@ class DisciplinasController extends AppController {
 	public function view($id = null) {
 		$this->Disciplina->id = $id;
 		if (!$this->Disciplina->exists()) {
-			throw new NotFoundException(__('Invalid disciplina'));
+			throw new NotFoundException(__('Disciplina Inválida'));
 		}
 		$this->set('disciplina', $this->Disciplina->read(null, $id));
 	}
@@ -43,10 +43,10 @@ class DisciplinasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Disciplina->create();
 			if ($this->Disciplina->save($this->request->data)) {
-				$this->Session->setFlash(__('The disciplina has been saved'));
+				$this->Session->setFlash(__('Registro adicionado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The disciplina could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 		$departametos = $this->Disciplina->Departamento->find('list',array ('fields'=> array('Departamento.id','Departamento.nome')));
@@ -64,14 +64,14 @@ class DisciplinasController extends AppController {
 	public function edit($id = null) {
 		$this->Disciplina->id = $id;
 		if (!$this->Disciplina->exists()) {
-			throw new NotFoundException(__('Invalid disciplina'));
+			throw new NotFoundException(__('Disciplina Inválida'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Disciplina->save($this->request->data)) {
-				$this->Session->setFlash(__('The disciplina has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The disciplina could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Disciplina->read(null, $id);
@@ -94,13 +94,13 @@ class DisciplinasController extends AppController {
 		}
 		$this->Disciplina->id = $id;
 		if (!$this->Disciplina->exists()) {
-			throw new NotFoundException(__('Invalid disciplina'));
+			throw new NotFoundException(__('Disciplina Inválida'));
 		}
 		if ($this->Disciplina->delete()) {
-			$this->Session->setFlash(__('Disciplina deleted'));
+			$this->Session->setFlash(__('O registro foi excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Disciplina was not deleted'));
+		$this->Session->setFlash(__('O registro não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

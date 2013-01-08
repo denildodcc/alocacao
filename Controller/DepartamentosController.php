@@ -27,7 +27,7 @@ class DepartamentosController extends AppController {
 	public function view($id = null) {
 		$this->Departamento->id = $id;
 		if (!$this->Departamento->exists()) {
-			throw new NotFoundException(__('Invalid departamento'));
+			throw new NotFoundException(__('Departamento Inválido'));
 		}
 		$this->set('departamento', $this->Departamento->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class DepartamentosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Departamento->create();
 			if ($this->Departamento->save($this->request->data)) {
-				$this->Session->setFlash(__('The departamento has been saved'));
+				$this->Session->setFlash(__('O registro foi adicionado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The departamento could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo. Por favor tente novamente'));
 			}
 		}
 		$institutos = $this->Departamento->Instituto->find('list');
@@ -61,14 +61,14 @@ class DepartamentosController extends AppController {
 	public function edit($id = null) {
 		$this->Departamento->id = $id;
 		if (!$this->Departamento->exists()) {
-			throw new NotFoundException(__('Invalid departamento'));
+			throw new NotFoundException(__('Departamento Inválido'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Departamento->save($this->request->data)) {
-				$this->Session->setFlash(__('The departamento has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The departamento could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo. Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Departamento->read(null, $id);
@@ -91,13 +91,13 @@ class DepartamentosController extends AppController {
 		}
 		$this->Departamento->id = $id;
 		if (!$this->Departamento->exists()) {
-			throw new NotFoundException(__('Invalid departamento'));
+			throw new NotFoundException(__('Departamento Inválido'));
 		}
 		if ($this->Departamento->delete()) {
-			$this->Session->setFlash(__('Departamento deleted'));
+			$this->Session->setFlash(__('O registro foi excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Departamento was not deleted'));
+		$this->Session->setFlash(__('O registro não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

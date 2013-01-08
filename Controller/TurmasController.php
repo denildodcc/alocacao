@@ -27,7 +27,7 @@ class TurmasController extends AppController {
 	public function view($id = null) {
 		$this->Turma->id = $id;
 		if (!$this->Turma->exists()) {
-			throw new NotFoundException(__('Invalid turma'));
+			throw new NotFoundException(__('Turma inválida'));
 		}
 		$this->set('turma', $this->Turma->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class TurmasController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Turma->create();
 			if ($this->Turma->save($this->request->data)) {         
-				$this->Session->setFlash(__('The turma has been saved'));
+				$this->Session->setFlash(__('Registro salvo com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The turma could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 		$professors = $this->Turma->Professor->find('list', array('fields'=> array ('Professor.id','Professor.nome')));
@@ -68,14 +68,14 @@ class TurmasController extends AppController {
 	public function edit($id = null) {
 		$this->Turma->id = $id;
 		if (!$this->Turma->exists()) {
-			throw new NotFoundException(__('Invalid turma'));
+			throw new NotFoundException(__('Turma inválida'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Turma->save($this->request->data)) {
-				$this->Session->setFlash(__('The turma has been saved'));
+				$this->Session->setFlash(__('A turma foi salva'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The turma could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Turma->read(null, $id);
@@ -109,10 +109,10 @@ class TurmasController extends AppController {
 
               //fazer função para delete
                if (!$this->Turma->query("DELETE  FROM turmas WHERE cod_turmas=$cod_turmas AND disciplina_id=$disciplina_id")) {
-			$this->Session->setFlash(__('Turma deleted'));
+			$this->Session->setFlash(__('O registro foi excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Turma was not deleted'));
+		$this->Session->setFlash(__('O registro não foi excluído'));
 		$this->redirect(array('action' => 'index'));
              
 	}

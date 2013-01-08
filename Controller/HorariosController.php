@@ -27,7 +27,7 @@ class HorariosController extends AppController {
 	public function view($id = null) {
 		$this->Horario->id = $id;
 		if (!$this->Horario->exists()) {
-			throw new NotFoundException(__('Invalid horario'));
+			throw new NotFoundException(__('Horário Inválido'));
 		}
 		$this->set('horario', $this->Horario->read(null, $id));
 	}
@@ -41,16 +41,15 @@ class HorariosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Horario->create();
 			if ($this->Horario->save($this->request->data)) {
-				$this->Session->setFlash(__('The horario has been saved'));
+				$this->Session->setFlash(__('Registro adicionado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The horario could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
-		$horas = $this->Horario->Hora->find('list');
-		$dias = $this->Horario->Dia->find('list');
-		$turmas = $this->Horario->Turma->find('list');
-		$this->set(compact('horas', 'dias', 'turmas'));
+		$horas = $this->Horario->Hora->find('list', array('fields' => array('Hora.id','Hora.horas_inicial', 'Hora.horas_final')));
+		$dias = $this->Horario->Dia->find('list', array('fields' => array('Dia.id','Dia.dias_da_semana')));		
+		$this->set(compact('horas', 'dias'));
 	}
 
 /**
@@ -63,22 +62,22 @@ class HorariosController extends AppController {
 	public function edit($id = null) {
 		$this->Horario->id = $id;
 		if (!$this->Horario->exists()) {
-			throw new NotFoundException(__('Invalid horario'));
+			throw new NotFoundException(__('Horário Inválido'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Horario->save($this->request->data)) {
-				$this->Session->setFlash(__('The horario has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The horario could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Horario->read(null, $id);
 		}
-		$horas = $this->Horario->Hora->find('list');
-		$dias = $this->Horario->Dium->find('list');
-		$turmas = $this->Horario->Turma->find('list');
-		$this->set(compact('horas', 'dias', 'turmas'));
+		$horas = $this->Horario->Hora->find('list', array('fields' => array('Hora.id','Hora.horas_inicial', 'Hora.horas_final')));
+		$dias = $this->Horario->Dia->find('list', array('fields' => array('Dia.id','Dia.dias_da_semana')));
+		
+		$this->set(compact('horas', 'dias'));
 	}
 
 /**
@@ -95,13 +94,13 @@ class HorariosController extends AppController {
 		}
 		$this->Horario->id = $id;
 		if (!$this->Horario->exists()) {
-			throw new NotFoundException(__('Invalid horario'));
+			throw new NotFoundException(__('Horário Inválido'));
 		}
 		if ($this->Horario->delete()) {
-			$this->Session->setFlash(__('Horario deleted'));
+			$this->Session->setFlash(__('O registro foi excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Horario was not deleted'));
+		$this->Session->setFlash(__('O registro não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

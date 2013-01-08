@@ -27,7 +27,7 @@ class InstitutosController extends AppController {
 	public function view($id = null) {
 		$this->Instituto->id = $id;
 		if (!$this->Instituto->exists()) {
-			throw new NotFoundException(__('Invalid instituto'));
+			throw new NotFoundException(__('Instituto inválido'));
 		}
 		$this->set('instituto', $this->Instituto->read(null, $id));
 	}
@@ -41,10 +41,10 @@ class InstitutosController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Instituto->create();
 			if ($this->Instituto->save($this->request->data)) {
-				$this->Session->setFlash(__('The instituto has been saved'));
+				$this->Session->setFlash(__('Registro adicionado com sucesso'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The instituto could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		}
 	}
@@ -59,14 +59,14 @@ class InstitutosController extends AppController {
 	public function edit($id = null) {
 		$this->Instituto->id = $id;
 		if (!$this->Instituto->exists()) {
-			throw new NotFoundException(__('Invalid instituto'));
+			throw new NotFoundException(__('Instituto Inválido'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Instituto->save($this->request->data)) {
-				$this->Session->setFlash(__('The instituto has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The instituto could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo.Por favor tente novamente'));
 			}
 		} else {
 			$this->request->data = $this->Instituto->read(null, $id);
@@ -87,13 +87,13 @@ class InstitutosController extends AppController {
 		}
 		$this->Instituto->id = $id;
 		if (!$this->Instituto->exists()) {
-			throw new NotFoundException(__('Invalid instituto'));
+			throw new NotFoundException(__('Instituto inválido'));
 		}
 		if ($this->Instituto->delete()) {
-			$this->Session->setFlash(__('Instituto deleted'));
+			$this->Session->setFlash(__('Instituto excluído'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Instituto was not deleted'));
+		$this->Session->setFlash(__('O Instituto não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

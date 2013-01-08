@@ -8,12 +8,12 @@
 		</dd>
 		<dt><?php echo __('Hora'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($horario['Hora']['id'], array('controller' => 'horas', 'action' => 'view', $horario['Hora']['id'])); ?>
+			<?php echo $this->Html->link($horario['Hora']['horas_inicial']. '-' . $horario['Hora']['horas_final'], array('controller' => 'horas', 'action' => 'view', $horario['Hora']['id'])); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Dia'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($horario['Dia']['id'], array('controller' => 'dias', 'action' => 'view', $horario['Dia']['id'])); ?>
+			<?php echo $this->Html->link($horario['Dia']['dias_da_semana'], array('controller' => 'dias', 'action' => 'view', $horario['Dia']['id'])); ?>
 			&nbsp;
 		</dd>
 	</dl>
