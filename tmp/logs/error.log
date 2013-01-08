@@ -12,3 +12,19 @@
 #3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ProfessorsController), Object(CakeRequest), Object(CakeResponse))
 #4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-01-08 03:57:59 Error: Fatal Error (1): Call to a member function charset() on a non-object in [D:\xampp\htdocs\cakephp2_2_4\app\View\Layouts\default.ctp, line 14]
+2013-01-08 03:57:59 Error: [FatalErrorException] Call to a member function charset() on a non-object
+#0 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 14, Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 14, Array)
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-08 03:59:57 Error: Fatal Error (1): Call to a member function charset() on a non-object in [D:\xampp\htdocs\cakephp2_2_4\app\View\Layouts\default.ctp, line 14]
+2013-01-08 03:59:57 Error: [FatalErrorException] Call to a member function charset() on a non-object
+#0 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 14)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 14, Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 14, Array)
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

@@ -34,7 +34,7 @@ class TurmasController extends AppController {
 
 /**
  * add method
- *
+ *so testando
  * @return void
  */
 	public function add() {
