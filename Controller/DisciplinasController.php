@@ -14,6 +14,8 @@ class DisciplinasController extends AppController {
  */
 	public function index() {
 		$this->Disciplina->recursive = 0;
+                //$disciplinas = $this->Disciplina->find('list',array ('fields'=> array('Disciplina.id','Disciplina.nome')));
+		//$this->set('disciplinas', $disciplinas);
 		$this->set('disciplinas', $this->paginate());
 	}
 
@@ -74,7 +76,7 @@ class DisciplinasController extends AppController {
 		} else {
 			$this->request->data = $this->Disciplina->read(null, $id);
 		}
-		$departametos = $this->Disciplina->Departamento->find('list',array ('fields'=> array('Departamento.id','Departamento.nome')));
+		$departamentos = $this->Disciplina->Departamento->find('list',array ('fields'=> array('Departamento.id','Departamento.nome')));
 		$this->set(compact('departamentos'));
 	}
 

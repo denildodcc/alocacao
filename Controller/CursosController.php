@@ -12,9 +12,7 @@ class CursosController extends AppController {
  *
  * @return void
  */
-    
 	public function index() {
-                $this->pageTitle = 'Cursos: Index';
 		$this->Curso->recursive = 0;
 		$this->set('cursos', $this->paginate());
 	}
@@ -27,11 +25,11 @@ class CursosController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-                $this->pageTitle = 'Cursos: Ver cursos';
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
 			throw new NotFoundException(__('Invalid curso'));
 		}
+                
 		$this->set('curso', $this->Curso->read(null, $id));
 	}
 
@@ -41,18 +39,17 @@ class CursosController extends AppController {
  * @return void
  */
 	public function add() {
-                $this->pageTitle = 'Cursos: Adicionar Curso';
 		if ($this->request->is('post')) {
 			$this->Curso->create();
 			if ($this->Curso->save($this->request->data)) {
-				$this->Session->setFlash(__('The curso has been saved'));
+				$this->Session->setFlash(__('Registro adicionado com sucesso!'));
 				$this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The curso could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('O registro não pode ser salvo. Por favor tente novamente.'));
 			}
 		}
 		
-		$departamentos = $this->Curso->Departamento->find('list',array('fields'=> array ('Departamento.id','Departamento.nome')));
+                $departamentos = $this->Curso->Departamento->find('list',array('fields'=> array ('Departamento.id','Departamento.nome')));
 		$this->set(compact('departamentos'));
 	}
 
@@ -64,14 +61,13 @@ class CursosController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-                $this->pageTitle = 'Cursos: Editar Cursos';
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
 			throw new NotFoundException(__('Invalid curso'));
 		}
 		if ($this->request->is('post') || $this->request->is('put')) {
 			if ($this->Curso->save($this->request->data)) {
-				$this->Session->setFlash(__('The curso has been saved'));
+				$this->Session->setFlash(__('O registro foi salvo'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The curso could not be saved. Please, try again.'));
@@ -79,7 +75,7 @@ class CursosController extends AppController {
 		} else {
 			$this->request->data = $this->Curso->read(null, $id);
 		}
-		$departamentos = $this->Curso->Departamento->find('list',array('fields'=> array ('Departamento.id','Departamento.nome')));
+                $departamentos = $this->Curso->Departamento->find('list',array('fields'=> array ('Departamento.id','Departamento.nome')));
 		$this->set(compact('departamentos'));
 	}
 
@@ -97,13 +93,13 @@ class CursosController extends AppController {
 		}
 		$this->Curso->id = $id;
 		if (!$this->Curso->exists()) {
-			throw new NotFoundException(__('Invalid curso'));
+			throw new NotFoundException(__('Curso inválido'));
 		}
 		if ($this->Curso->delete()) {
-			$this->Session->setFlash(__('Curso deleted'));
+			$this->Session->setFlash(__('Registro excluído com sucesso'));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->Session->setFlash(__('Curso was not deleted'));
+		$this->Session->setFlash(__('O Curso não foi excluído'));
 		$this->redirect(array('action' => 'index'));
 	}
 }

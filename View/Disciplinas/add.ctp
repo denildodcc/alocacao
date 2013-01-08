@@ -3,7 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Adição de Disciplina'); ?></legend>
 	<?php
-		echo $this->Form->input('departamento_id');
+		echo $this->Form->input('departamento_id');//,array('options' => $departamentos));
 		echo $this->Form->input('id',array('label' => 'codigo', 'type' =>'text'));
 		echo $this->Form->input('nome');
 	?>

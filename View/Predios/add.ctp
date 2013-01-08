@@ -1,24 +1,24 @@
 <div class="predios form">
 <?php echo $this->Form->create('Predio'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Predio'); ?></legend>
+		<legend><?php echo __('Adição de Prédio'); ?></legend>
 	<?php
 		echo $this->Form->input('nome');
 		echo $this->Form->input('endereco');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Enviar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Predios'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Favoritos'), array('controller' => 'favoritos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Favorito'), array('controller' => 'favoritos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Salas'), array('controller' => 'salas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Sala'), array('controller' => 'salas', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Salas Turmas'), array('controller' => 'salas_turmas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Salas Turma'), array('controller' => 'salas_turmas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Predios'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Favoritos'), array('controller' => 'favoritos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Favorito'), array('controller' => 'favoritos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Salas'), array('controller' => 'salas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Sala'), array('controller' => 'salas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Salas Turmas'), array('controller' => 'salas_turmas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Salas Turma'), array('controller' => 'salas_turmas', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

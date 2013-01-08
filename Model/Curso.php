@@ -48,7 +48,8 @@ class Curso extends AppModel {
  *
  * @var array
  */
-        /*  isto foi alterado e não se faz mais necessário
+        
+   /** Retirando pois está dando erro no codigo     
 	public $hasMany = array(
 		'Disciplina' => array(
 			'className' => 'Disciplina',
@@ -63,6 +64,8 @@ class Curso extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		)
-	); */
+	);
+    * */
+    
 
 }

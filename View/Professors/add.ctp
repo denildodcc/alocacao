@@ -1,20 +1,20 @@
 <div class="professors form">
 <?php echo $this->Form->create('Professor'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Professor'); ?></legend>
+		<legend><?php echo __('Adição de Professor'); ?></legend>
 	<?php
 		echo $this->Form->input('id',array('label' => 'cpf', 'type' =>'text'));
 		echo $this->Form->input('nome');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Enviar')); ?>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Html->link(__('List Professors'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Turmas'), array('controller' => 'turmas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Turma'), array('controller' => 'turmas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Professores'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Turmas'), array('controller' => 'turmas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Turma'), array('controller' => 'turmas', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

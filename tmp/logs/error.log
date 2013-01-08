@@ -460,3 +460,140 @@
 #3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(CursosController), Object(CakeRequest), Object(CakeResponse))
 #4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2013-01-08 18:27:06 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view('LETB001')
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:35:00 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\xampp\htdocs\cakephp2_2_4\app\Controller\CursosController.php, line 17]
+2013-01-08 18:35:00 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 17, Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 17, Array)
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-08 18:35:40 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\xampp\htdocs\cakephp2_2_4\app\Controller\CursosController.php, line 77]
+2013-01-08 18:35:40 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 77)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 77, Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 77, Array)
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-08 18:36:26 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\xampp\htdocs\cakephp2_2_4\app\Controller\CursosController.php, line 78]
+2013-01-08 18:36:26 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 78, Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 78, Array)
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-08 18:36:55 Error: Fatal Error (1): Call to a member function find() on a non-object in [D:\xampp\htdocs\cakephp2_2_4\app\Controller\CursosController.php, line 52]
+2013-01-08 18:36:55 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\xampp\htdocs...', 52, Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\xampp\htdocs...', 52, Array)
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-01-08 18:41:48 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view('LETB001')
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:43:40 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view('LETB001')
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:33 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:36 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:37 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:38 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:38 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:39 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:39 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:39 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:40 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:45:41 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view()
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:47:14 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view('LETB001')
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-01-08 18:53:43 Error: [NotFoundException] Invalid turma
+#0 [internal function]: TurmasController->view('LETB001')
+#1 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(TurmasController), Array)
+#2 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 D:\xampp\htdocs\cakephp2_2_4\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(TurmasController), Object(CakeRequest), Object(CakeResponse))
+#4 D:\xampp\htdocs\cakephp2_2_4\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

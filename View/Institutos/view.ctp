@@ -11,9 +11,9 @@
 			<?php echo h($instituto['Instituto']['nome']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Endereço'); ?></dt>
+		<dt><?php echo __('Endereco'); ?></dt>
 		<dd>
-			<?php echo h($instituto['Instituto']['endereço']); ?>
+			<?php echo h($instituto['Instituto']['endereco']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -21,18 +21,18 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Instituto'), array('action' => 'edit', $instituto['Instituto']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Instituto'), array('action' => 'delete', $instituto['Instituto']['id']), null, __('Are you sure you want to delete # %s?', $instituto['Instituto']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Institutos'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Instituto'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Departamentos'), array('controller' => 'departamentos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Favoritos'), array('controller' => 'favoritos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Favorito'), array('controller' => 'favoritos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Instituto'), array('action' => 'edit', $instituto['Instituto']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Excluir Instituto'), array('action' => 'delete', $instituto['Instituto']['id']), null, __('Are you sure you want to delete # %s?', $instituto['Instituto']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Institutos'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Instituto'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Departamentos'), array('controller' => 'departamentos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Favoritos'), array('controller' => 'favoritos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Favorito'), array('controller' => 'favoritos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Departamentos'); ?></h3>
+	<h3><?php echo __(' Departamentos Relacionados'); ?></h3>
 	<?php if (!empty($instituto['Departamento'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -49,9 +49,9 @@
 			<td><?php echo $departamento['instituto_id']; ?></td>
 			<td><?php echo $departamento['nome']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'departamentos', 'action' => 'view', $departamento['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'departamentos', 'action' => 'edit', $departamento['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'departamentos', 'action' => 'delete', $departamento['id']), null, __('Are you sure you want to delete # %s?', $departamento['id'])); ?>
+				<?php echo $this->Html->link(__('Visualizar'), array('controller' => 'departamentos', 'action' => 'view', $departamento['id'])); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'departamentos', 'action' => 'edit', $departamento['id'])); ?>
+				<?php echo $this->Form->postLink(__('Excluir'), array('controller' => 'departamentos', 'action' => 'delete', $departamento['id']), null, __('Are you sure you want to delete # %s?', $departamento['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -60,40 +60,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Favoritos'); ?></h3>
-	<?php if (!empty($instituto['Favorito'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Predio Id'); ?></th>
-		<th><?php echo __('Instituto Id'); ?></th>
-		<th><?php echo __('Ordem'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php
-		$i = 0;
-		foreach ($instituto['Favorito'] as $favorito): ?>
-		<tr>
-			<td><?php echo $favorito['predio_id']; ?></td>
-			<td><?php echo $favorito['instituto_id']; ?></td>
-			<td><?php echo $favorito['ordem']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'favoritos', 'action' => 'view', $favorito['predio_id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'favoritos', 'action' => 'edit', $favorito['predio_id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'favoritos', 'action' => 'delete', $favorito['predio_id']), null, __('Are you sure you want to delete # %s?', $favorito['predio_id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Favorito'), array('controller' => 'favoritos', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('Adicionar Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>

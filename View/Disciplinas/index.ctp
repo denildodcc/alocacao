@@ -3,7 +3,7 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('curso_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('departamento_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
@@ -12,7 +12,7 @@
 	<tr>
 		<td><?php echo h($disciplina['Disciplina']['id']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($disciplina['Curso']['id'], array('controller' => 'cursos', 'action' => 'view', $disciplina['Curso']['id'])); ?>
+			<?php echo $this->Html->link($disciplina['Departamento']['nome'], array('controller' => 'departamento', 'action' => 'view', $disciplina['Departamento']['id'])); ?>
 		</td>
 		<td><?php echo h($disciplina['Disciplina']['nome']); ?>&nbsp;</td>
 		<td class="actions">
