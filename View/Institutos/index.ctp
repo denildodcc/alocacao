@@ -12,7 +12,7 @@
 	<tr>
 		<td><?php echo h($instituto['Instituto']['id']); ?>&nbsp;</td>
 		<td><?php echo h($instituto['Instituto']['nome']); ?>&nbsp;</td>
-		<td><?php echo h($instituto['Instituto']['endere�o']); ?>&nbsp;</td>
+		<td><?php echo h($instituto['Instituto']['endereço']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Visualizar'), array('action' => 'visualizar', $instituto['Instituto']['id'])); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'editar', $instituto['Instituto']['id'])); ?>
