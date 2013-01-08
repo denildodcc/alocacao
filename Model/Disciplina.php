@@ -3,7 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * Disciplina Model
  *
- * @property Curso $Curso
+ * @property Departamento $Departamento
  * @property SalasTurma $SalasTurma
  * @property Turma $Turma
  * @property TurmasHorario $TurmasHorario
@@ -16,7 +16,7 @@ class Disciplina extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'curso_id' => array(
+		'departamento_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -36,9 +36,9 @@ class Disciplina extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Curso' => array(
-			'className' => 'Curso',
-			'foreignKey' => 'curso_id',
+		'Departamento' => array(
+			'className' => 'Departamento',
+			'foreignKey' => 'departamento_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

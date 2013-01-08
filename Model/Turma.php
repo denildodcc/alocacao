@@ -4,6 +4,8 @@ App::uses('AppModel', 'Model');
  * Turma Model
  *
  * @property Professor $Professor
+ * @property Disciplina $Disciplina
+ * @property Curso $Curso
  * @property Sala $Sala
  * @property Horario $Horario
  */
@@ -14,7 +16,7 @@ class Turma extends AppModel {
  *
  * @var string
  */
-	public $primaryKey = 'disciplina_id';
+	public $primaryKey = 'cod_turmas';
 
 /**
  * Validation rules
@@ -32,9 +34,9 @@ class Turma extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'cod_turmas' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+		'disciplina_id' => array(
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -42,7 +44,7 @@ class Turma extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'deficiente' => array(
+		'curso_id' => array(
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
@@ -65,6 +67,20 @@ class Turma extends AppModel {
 		'Professor' => array(
 			'className' => 'Professor',
 			'foreignKey' => 'professor_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Disciplina' => array(
+			'className' => 'Disciplina',
+			'foreignKey' => 'disciplina_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'Curso' => array(
+			'className' => 'Curso',
+			'foreignKey' => 'curso_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

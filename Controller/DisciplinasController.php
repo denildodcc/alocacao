@@ -47,8 +47,9 @@ class DisciplinasController extends AppController {
 				$this->Session->setFlash(__('The disciplina could not be saved. Please, try again.'));
 			}
 		}
-		$cursos = $this->Disciplina->Curso->find('list');
-		$this->set(compact('cursos'));
+		$departametos = $this->Disciplina->Departamento->find('list',array ('fields'=> array('Departamento.id','Departamento.nome')));
+                debug($departametos);
+		$this->set('departamentos',$departametos);
 	}
 
 /**
@@ -73,8 +74,8 @@ class DisciplinasController extends AppController {
 		} else {
 			$this->request->data = $this->Disciplina->read(null, $id);
 		}
-		$cursos = $this->Disciplina->Curso->find('list');
-		$this->set(compact('cursos'));
+		$departametos = $this->Disciplina->Departamento->find('list',array ('fields'=> array('Departamento.id','Departamento.nome')));
+		$this->set(compact('departamentos'));
 	}
 
 /**

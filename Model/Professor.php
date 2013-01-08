@@ -14,10 +14,7 @@ class Professor extends AppModel {
  * hasMany associations
  *
  * @var array
- * 
  */
-        public $primaryKey = 'id';
-        
 	public $hasMany = array(
 		'Turma' => array(
 			'className' => 'Turma',

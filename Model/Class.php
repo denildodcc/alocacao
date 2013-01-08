@@ -1,20 +1,20 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * SalasTurma Model
+ * Class Model
  *
- * @property Predio $Predio
- * @property Turma $Turma
- * @property Disciplina $Disciplina
+ * @property Professor $Professor
+ * @property Schedule $Schedule
+ * @property Room $Room
  */
-class SalasTurma extends AppModel {
+class Class extends AppModel {
 
 /**
  * Primary key field
  *
  * @var string
  */
-	public $primaryKey = 'sala_id';
+	public $primaryKey = 'discipline_id';
 
 /**
  * Validation rules
@@ -22,29 +22,29 @@ class SalasTurma extends AppModel {
  * @var array
  */
 	public $validate = array(
-		'predio_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'turma_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'disciplina_id' => array(
+		'professor_id' => array(
 			'notempty' => array(
 				'rule' => array('notempty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'cod_classes' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'deficient' => array(
+			'numeric' => array(
+				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,
@@ -62,26 +62,51 @@ class SalasTurma extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Predio' => array(
-			'className' => 'Predio',
-			'foreignKey' => 'predio_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Turma' => array(
-			'className' => 'Turma',
-			'foreignKey' => 'turma_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Disciplina' => array(
-			'className' => 'Disciplina',
-			'foreignKey' => 'disciplina_id',
+		'Professor' => array(
+			'className' => 'Professor',
+			'foreignKey' => 'professor_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		)
 	);
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Schedule' => array(
+			'className' => 'Schedule',
+			'joinTable' => 'classes_schedules',
+			'foreignKey' => 'class_id',
+			'associationForeignKey' => 'schedule_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		),
+		'Room' => array(
+			'className' => 'Room',
+			'joinTable' => 'rooms_classes',
+			'foreignKey' => 'class_id',
+			'associationForeignKey' => 'room_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+			'deleteQuery' => '',
+			'insertQuery' => ''
+		)
+	);
+
 }

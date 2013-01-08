@@ -3,8 +3,7 @@
 	<fieldset>
 		<legend><?php echo __('Add Professor'); ?></legend>
 	<?php
-                
-                echo $this->Form->input('id',array('type' => 'text', 'label' => 'CPF'));
+		echo $this->Form->input('id',array('label' => 'cpf', 'type' =>'text'));
 		echo $this->Form->input('nome');
 	?>
 	</fieldset>

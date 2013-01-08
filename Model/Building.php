@@ -1,13 +1,20 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Predio Model
+ * Building Model
  *
- * @property Favorito $Favorito
- * @property Sala $Sala
- * @property SalasTurma $SalasTurma
+ * @property Favorite $Favorite
+ * @property Room $Room
+ * @property RoomsClass $RoomsClass
  */
-class Predio extends AppModel {
+class Building extends AppModel {
+
+/**
+ * Use table
+ *
+ * @var mixed False or table name
+ */
+	public $useTable = 'building';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -18,9 +25,9 @@ class Predio extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Favorito' => array(
-			'className' => 'Favorito',
-			'foreignKey' => 'predio_id',
+		'Favorite' => array(
+			'className' => 'Favorite',
+			'foreignKey' => 'building_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -31,9 +38,9 @@ class Predio extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'Sala' => array(
-			'className' => 'Sala',
-			'foreignKey' => 'predio_id',
+		'Room' => array(
+			'className' => 'Room',
+			'foreignKey' => 'building_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -44,9 +51,9 @@ class Predio extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'SalasTurma' => array(
-			'className' => 'SalasTurma',
-			'foreignKey' => 'predio_id',
+		'RoomsClass' => array(
+			'className' => 'RoomsClass',
+			'foreignKey' => 'building_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

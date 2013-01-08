@@ -21,19 +21,15 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Disciplina'), array('action' => 'edit', $disciplina['Disciplina']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Disciplina'), array('action' => 'delete', $disciplina['Disciplina']['id']), null, __('Are you sure you want to delete # %s?', $disciplina['Disciplina']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Disciplinas'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Disciplina'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cursos'), array('controller' => 'cursos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Curso'), array('controller' => 'cursos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Salas Turmas'), array('controller' => 'salas_turmas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Salas Turma'), array('controller' => 'salas_turmas', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Turmas'), array('controller' => 'turmas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Turma'), array('controller' => 'turmas', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Turmas Horarios'), array('controller' => 'turmas_horarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Turmas Horario'), array('controller' => 'turmas_horarios', 'action' => 'add')); ?> </li>
-	</ul>
+		<li><?php echo $this->Html->link(__('Editar Disciplina'), array('action' => 'edit', $disciplina['Disciplina']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Excluir Disciplina'), array('action' => 'delete', $disciplina['Disciplina']['id']), null, __('Are you sure you want to delete # %s?', $disciplina['Disciplina']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Disciplinas'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Disciplina'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Cursos'), array('controller' => 'cursos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Curso'), array('controller' => 'cursos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Turmas'), array('controller' => 'turmas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Turma'), array('controller' => 'turmas', 'action' => 'add')); ?> </li>
+		
 </div>
 <div class="related">
 	<h3><?php echo __('Related Salas Turmas'); ?></h3>
@@ -68,7 +64,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Salas Turma'), array('controller' => 'salas_turmas', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('Adicionar Salas Turma'), array('controller' => 'salas_turmas', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>
@@ -103,7 +99,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Turma'), array('controller' => 'turmas', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('Adicionar Turma'), array('controller' => 'turmas', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>
@@ -136,7 +132,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Turmas Horario'), array('controller' => 'turmas_horarios', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('Adicionar Turmas Horario'), array('controller' => 'turmas_horarios', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>

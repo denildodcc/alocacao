@@ -48,7 +48,7 @@ class HorariosController extends AppController {
 			}
 		}
 		$horas = $this->Horario->Hora->find('list');
-		$dias = $this->Horario->Dium->find('list');
+		$dias = $this->Horario->Dia->find('list');
 		$turmas = $this->Horario->Turma->find('list');
 		$this->set(compact('horas', 'dias', 'turmas'));
 	}

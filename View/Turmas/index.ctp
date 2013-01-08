@@ -20,7 +20,7 @@
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $turma['Turma']['disciplina_id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $turma['Turma']['disciplina_id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $turma['Turma']['disciplina_id']), null, __('Are you sure you want to delete # %s?', $turma['Turma']['disciplina_id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $turma['Turma']['disciplina_id'],$turma['Turma']['cod_turmas']), null, __('Are you sure you want to delete # %s?', $turma['Turma']['disciplina_id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

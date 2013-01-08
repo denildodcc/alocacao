@@ -32,8 +32,8 @@ class TurmasHorario extends AppModel {
 			),
 		),
 		'disciplina_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
+			'notempty' => array(
+				'rule' => array('notempty'),
 				//'message' => 'Your custom message here',
 				//'allowEmpty' => false,
 				//'required' => false,

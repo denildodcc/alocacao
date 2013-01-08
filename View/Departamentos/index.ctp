@@ -5,7 +5,7 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('instituto_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	<?php
 	foreach ($departamentos as $departamento): ?>
@@ -16,9 +16,9 @@
 		</td>
 		<td><?php echo h($departamento['Departamento']['nome']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $departamento['Departamento']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $departamento['Departamento']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $departamento['Departamento']['id']), null, __('Are you sure you want to delete # %s?', $departamento['Departamento']['id'])); ?>
+			<?php echo $this->Html->link(__('Visualizar'), array('action' => 'view', $departamento['Departamento']['id'])); ?>
+			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $departamento['Departamento']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Excluir'), array('action' => 'delete', $departamento['Departamento']['id']), null, __('Are you sure you want to delete # %s?', $departamento['Departamento']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -26,25 +26,25 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Página {:page} de {:pages}, mostrando {:current} do total de {:count} registro(s), começando em {:start}, terminando em {:end}')
 	));
 	?>	</p>
 
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('anterior'), array(), null, array('class' => 'prev disabled'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('próximo') . ' >', array(), null, array('class' => 'next disabled'));
 	?>
 	</div>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Departamento'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Instituto'), array('controller' => 'institutos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cursos'), array('controller' => 'cursos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Curso'), array('controller' => 'cursos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Departamento'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Institutos'), array('controller' => 'institutos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Instituto'), array('controller' => 'institutos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Cursos'), array('controller' => 'cursos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Curso'), array('controller' => 'cursos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

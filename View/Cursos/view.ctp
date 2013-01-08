@@ -19,20 +19,20 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Curso'), array('action' => 'edit', $curso['Curso']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Curso'), array('action' => 'delete', $curso['Curso']['id']), null, __('Are you sure you want to delete # %s?', $curso['Curso']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Cursos'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Curso'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Departamentos'), array('controller' => 'departamentos', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Disciplinas'), array('controller' => 'disciplinas', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Disciplina'), array('controller' => 'disciplinas', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Curso'), array('action' => 'edit', $curso['Curso']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Excluir Curso'), array('action' => 'delete', $curso['Curso']['id']), null, __('Tem certeza que deseja excluir o registro de id  # %s?', $curso['Curso']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Cursos'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Curso'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Departamentos'), array('controller' => 'departamentos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Departamento'), array('controller' => 'departamentos', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Listar Disciplinas'), array('controller' => 'disciplinas', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Adicionar Disciplina'), array('controller' => 'disciplinas', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
-	<h3><?php echo __('Related Disciplinas'); ?></h3>
+	<h3><?php echo __('Disciplinas Relacionadas'); ?></h3>
 	<?php if (!empty($curso['Disciplina'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
@@ -49,9 +49,9 @@
 			<td><?php echo $disciplina['curso_id']; ?></td>
 			<td><?php echo $disciplina['nome']; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'disciplinas', 'action' => 'view', $disciplina['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'disciplinas', 'action' => 'edit', $disciplina['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'disciplinas', 'action' => 'delete', $disciplina['id']), null, __('Are you sure you want to delete # %s?', $disciplina['id'])); ?>
+				<?php echo $this->Html->link(__('Visualizar'), array('controller' => 'disciplinas', 'action' => 'view', $disciplina['id'])); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'disciplinas', 'action' => 'edit', $disciplina['id'])); ?>
+				<?php echo $this->Form->postLink(__('Excluir'), array('controller' => 'disciplinas', 'action' => 'delete', $disciplina['id']), null, __('Are you sure you want to delete # %s?', $disciplina['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
@@ -60,7 +60,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Disciplina'), array('controller' => 'disciplinas', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('Adicionar Disciplina'), array('controller' => 'disciplinas', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>
